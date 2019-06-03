@@ -1,0 +1,1 @@
+Aplicacion Sencilla creada en Django 2.2.1
