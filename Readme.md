@@ -1,1 +1,3 @@
-Aplicacion Sencilla creada en Django 2.2.1
+Aplicacion Sencilla creada en Django 
+
+(Version 2.2.1)
