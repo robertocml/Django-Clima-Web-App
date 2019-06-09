@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
 </head>
 
 <body>
-    <section class="hero is-primary">
+
+    <section class="hero is-white">
         <div class="hero-body">
             <div class="container">
-                <h1 class="title">
-                    What's the weather like?
+                <h1 class="title" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+                    ¿Que tal está el clima hoy?
                 </h1>
             </div>
         </div>
@@ -26,11 +28,11 @@
                     <form method="POST">
                         <div class="field has-addons">
                             <div class="control is-expanded">
-                                <input class="input" type="text" placeholder="City Name">
+                                <input class="input" type="text" placeholder="Nombre de la Ciudad">
                             </div>
                             <div class="control">
                                 <button class="button is-info">
-                                    Add City
+                                    Buscar Ciudad
                                 </button>
                             </div>
                         </div>
@@ -47,16 +49,16 @@
                         <article class="media">
                             <div class="media-left">
                                 <figure class="image is-50x50">
-                                    <img src="http://openweathermap.org/img/w/10d.png" alt="Image">
+                                    <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image">
                                 </figure>
                             </div>
                             <div class="media-content">
                                 <div class="content">
                                     <p>
-                                        <span class="title">Las Vegas</span>
+                                        <span class="title">{{ city_weather.city }}</span>
                                         <br>
-                                        <span class="subtitle">29° F</span>
-                                        <br> thunderstorm with heavy rain
+                                        <span class="subtitle">{{ city_weather.temperature }} ℃</span>
+                                        <br> {{ city_weather.description }} 
                                     </p>
                                 </div>
                             </div>
