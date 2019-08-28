@@ -10,9 +10,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
 </head>
 
+<style>
+    /* Style the body */
+    body {
+      font-family: Arial;
+      margin: 0;
+    }
+    
+    /* Header/Logo Title */
+    #header {
+      padding: 30px;
+      text-align: center;
+      background: #7ddf85;
+      color: white;
+      font-size: 30px;
+    }
+
+
+    .title {
+
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 45px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;
+    }
+    </style>
+
+
 <body>
 
-    <section class="hero is-white">
+    <section class="hero is-white" id="header">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
@@ -55,7 +79,7 @@
                             <div class="media-content">
                                 <div class="content">
                                     <p>
-                                        <span class="title">{{ city_weather.city }}</span>
+                                        <span class="titleCity">{{ city_weather.city }}</span>
                                         <br>
                                         <span class="subtitle">{{ city_weather.temperature }} ℃</span>
                                         <br> {{ city_weather.description }} 
@@ -68,8 +92,8 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
-    </footer>
+
 </body>
+
 
 </html>

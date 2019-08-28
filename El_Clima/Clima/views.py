@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def index(request):
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metrics&lang=es&APPID=076e9519efb070c5ddf4e3b5a1e3d6ba'
-    city = 'Saltillo,Mx'
+    city = 'Monterrey,Mx'
 
     r = requests.get(url.format(city)).json()
 
