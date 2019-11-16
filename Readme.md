@@ -10,6 +10,6 @@
 - Django Versión 2.2.2
 - API: Openweatherapi
 
-![Alt text](\Users\rober\Desktop\Wtemplate\screen_clima.png?raw=true "Title")
+![screen_clima](https://user-images.githubusercontent.com/12022308/68988747-bb626a00-0801-11ea-9db0-ad411383e3cf.PNG)
 
 (Esta aplicación fue creada con el único proposito de aprender las bases del framework.)
