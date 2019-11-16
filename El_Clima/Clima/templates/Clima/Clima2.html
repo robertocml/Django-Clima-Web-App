@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>Weather Page</title>
+</head>
+
+<body>
+
+
+    <div class="sub" align="center">
+        <form method="POST">
+            {% csrf_token %}
+            <div id="test">
+                <h6 id="title">El Tiempo</h6>
+                {{ form.name }}
+                <button type="submit" class="button">
+                    Buscar Ciudad
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {% for city_weather in weather_data %}
+            <div class="col">
+                <div class="weather-card one">
+                    <div class="top">
+                        <div class="wrapper">
+                            <div class="mynav">
+                                <a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a>
+                                <a href="javascript:;"><span class="lnr lnr-cog"></span></a>
+                            </div>
+                            <h1 class="heading">{{ city_weather.city }}</h1>
+                            <h3 class="location"> {{ city_weather.description }}</h3>
+                            <p class="temp">
+                                <span class="temp-value">{{ city_weather.temperature }}</span>
+                                <span class="deg">0</span>
+                                <a href="javascript:;"><span class="temp-type">C</span></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="wrapper">
+                            <ul class="forecast">
+                                <a href="javascript:;"><span class="lnr lnr-chevron-up go-up"></span></a>
+                                <li class="active">
+                                    <span class="date">Máxima</span>
+                                    <span class="lnr lnr-sun condition">
+                                        <span class="temp">{{ city_weather.tempMax }}<span class="deg">0</span><span
+                                                class="temp-type">C</span></span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="date">Mínima</span>
+                                    <span class="lnr lnr-cloud condition">
+                                        <span class="temp">{{ city_weather.tempMin }}<span class="deg">0</span><span
+                                                class="temp-type">C</span></span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>
