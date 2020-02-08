@@ -1,9 +1,9 @@
 # Aplicación de Clima creada en Django
 
 
-## Puedes Probarla Aquí:
+## Puedes Probarla Aquí: 
 ### http://roesbitweather.pythonanywhere.com/
-
+Nota: El servidor demora un poco en cargar la aplicación...                
 
 ## Esta aplicación fue creada usando
 * [Django](https://www.djangoproject.com/) - The web framework used
